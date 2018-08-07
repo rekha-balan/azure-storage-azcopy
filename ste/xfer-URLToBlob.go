@@ -121,7 +121,7 @@ func URLToBlob(jptm IJobPartTransferMgr, p pipeline.Pipeline, pacer *pacer) {
 		} else {
 			// if the create blob is a success, updating the transfer status to success
 			if jptm.ShouldLog(pipeline.LogInfo) {
-				jptm.Log(pipeline.LogInfo, "UPLOAD SUCCESSFUL")
+				jptm.Log(pipeline.LogInfo, "COPY SUCCESSFUL")
 			}
 
 			// TODO: set blob tier
@@ -289,7 +289,7 @@ func (bbc *blockBlobCopy) generateCopyURLToBlockBlobFunc(chunkId int32, startInd
 			}
 
 			if bbc.jptm.ShouldLog(pipeline.LogInfo) {
-				bbc.jptm.Log(pipeline.LogInfo, "UPLOAD SUCCESSFUL")
+				bbc.jptm.Log(pipeline.LogInfo, "COPY SUCCESSFUL")
 			}
 
 			// TODO: get and set blob tier correctly
